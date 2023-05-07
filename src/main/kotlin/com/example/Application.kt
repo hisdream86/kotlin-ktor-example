@@ -1,5 +1,6 @@
 package com.example
 
+import com.example.plugins.RequestIDPlugin
 import com.example.routes.setupRoutes
 import io.ktor.server.application.*
 import io.ktor.server.engine.*
@@ -11,5 +12,7 @@ fun main() {
 }
 
 fun Application.module() {
+    install(RequestIDPlugin)
+
     setupRoutes()
 }
