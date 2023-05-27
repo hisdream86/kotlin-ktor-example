@@ -1,0 +1,16 @@
+version: "3.7"
+
+services:
+  postgres:
+    image: postgres:15
+    ports:
+      - 5432:5432
+    volumes:
+      - postgres-data:/var/lib/postgres
+    environment:
+      POSTGRES_DB: "ktor-example"
+      POSTGRES_USER: "ktor-example"
+      POSTGRES_PASSWORD: "ktor-example"
+
+volumes:
+  postgres-data:
