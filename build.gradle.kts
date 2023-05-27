@@ -4,6 +4,7 @@ val logbackVersion: String by project
 val exposedVersion: String by project
 val hikariCPVersion: String by project
 val postgresqlVersion: String by project
+val flywayVersion: String by project
 
 plugins {
     kotlin("jvm") version "1.8.21"
@@ -31,6 +32,7 @@ dependencies {
     implementation("org.jetbrains.exposed:exposed-jdbc:$exposedVersion")
     implementation("org.jetbrains.exposed:exposed-dao:$exposedVersion")
     implementation("org.postgresql:postgresql:$postgresqlVersion")
+    implementation("org.flywaydb:flyway-core:$flywayVersion")
     implementation("com.zaxxer:HikariCP:$hikariCPVersion")
 
     testImplementation("io.ktor:ktor-server-tests-jvm:$ktorVersion")
